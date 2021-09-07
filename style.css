@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: #120078;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-wrapper {
+  min-height: 90vh;
+  width: 90%;
+  background-color: rgba(70, 44, 212);
+  border-radius: 15px;
+  padding: 1rem;
+  z-index: 20;
+  position: relative;
+}
+
+.nav-big {
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-nav {
+  display: flex;
+  list-style: none;
+}
+
+.big-nav li {
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+select {
+  display: flex;
+  appearance: none;
+  padding: 0.5em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 10rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+}
+
+.select-container {
+  margin: auto;
+  width: 10rem;
+  position: relative;
+  background-color: #fff;
+}
+
+.select-container::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: blue;
+  padding: 0.5rem;
+  background-color: cornsilk;
+  pointer-events: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  flex-direction: column;
+}
+
+#input-text {
+  margin: 2rem auto 2rem;
+  height: 3rem;
+  width: 20rem;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
+
+#word {
+  font-size: 3rem;
+}
+
+#time {
+  font-size: 1.4rem;
+}
+
+#input-text:focus {
+  outline: none;
+  color: hsl(172, 67%, 45%);
+}
+
+.shape1,
+.shape2,
+.shape3,
+.shape4 {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+}
+
+.shape1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  background-color: #9d0191;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  transform: rotate(45deg);
+}
+
+.nav-mini {
+  text-align: left;
+  position: fixed;
+  background-color: orangered;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: transform 0.5s;
+  transform: translateX(-100%);
+}
+
+.nav-mini.active {
+  transform: translateX(0);
+}
+
+#close-nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.open-nav {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .nav-big {
+    display: none;
+  }
+  .hidden {
+    display: block;
+  }
+}

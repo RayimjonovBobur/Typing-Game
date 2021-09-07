@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="shape4"></div>
+      <div class="inner-wrapper">
+        <button class="open-nav hidden">
+          <i class="fas fa-bars"> </i>
+        </button>
+        <nav class="nav-big">
+          <h3>Typing Game</h3>
+          <ul class="big-nav">
+            <li>Home</li>
+            <li>Connect</li>
+            <li>About</li>
+          </ul>
+        </nav>
+
+        <nav class="nav-mini">
+          <h3>Typing Game</h3>
+          <ul class="mini-nav">
+            <button id="close-nav">
+              <i class="fas fa-times"></i>
+            </button>
+            <li>Home</li>
+            <li>Connect</li>
+            <li>About</li>
+          </ul>
+        </nav>
+        <div class="select-container">
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <h1>
+          Score:
+          <span id="score">0</span>
+        </h1>
+
+        <div class="game-container">
+          <span id="word"></span>
+          <input type="text" id="input-text" />
+          <span id="time">Time: <span id="time">0</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Js -->
+    <script src="app.js"></script>
+  </body>
+</html>
