@@ -36,5 +36,5 @@ input.addEventListener("input", function (e) {
 });
 
 openNav.addEventListener("click", () => {
-  minNav.classList.toggle("active");
+  minNav.classList.toggle("active")
 });
